@@ -6,4 +6,6 @@ Features:-
 1. Login / SignUp using email authentication
 2. Email and OTP authentication for security
 3. Hide and unhide files with ease
-
+<br>
+Tools Used: 
+Intellij Idea (Maven)
