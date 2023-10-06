@@ -1,0 +1,37 @@
+MyConnection: 
+	- used static Connection to use it directly later.
+	- check if not null, because by default Connection 
+	  points to null, and to avoid null exception.
+
+Welcome:
+	- BufferedReader is used for IO, it gives IOExcetion so, catched it.
+	- used switch case using lambda expression(intro12)
+-> logIn():
+	- taking email from the user, if user exist, genOtp->sendOtp-> then check if entered otp and genOtp are equal the welcome otherwise invalid 	  	  otp.
+-> signUp():
+	- take name and email from the user  genOtp->sendOtp->verify the otp if otp.equals(genOtp) -> saveUser 	  else invalid otp
+
+Model -> User:
+	- taken name and email with const and getter setter 
+	Data:
+	- taken all the fields of data table with getter setter and constructors
+
+DAO -> userDAO: 
+	- create isUserExist() to check if the user exist in our db or not 
+	- created saveUser() , if user does not exist then save it in db or insert in the users table
+    -> dataDao:
+	->getAllFiles():
+		- this will show all the files, as list
+	-> hideFile():
+		- main motive is to store the file data in our db and delete that file 
+		- filereader is used to read file data , and setCharacterStream() to set for blob data(bin_data)
+
+Service -> UserService:
+	- created saveUser() to check if user return 0 means false else save it to db.
+
+	-> GenerateOTP:
+	- create String getOtp() and to get random four digits using string formating , only 4 digits
+
+	-> SendOtpServie:
+	- class to send otp
+
